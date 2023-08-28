@@ -1,0 +1,55 @@
+from django.urls import path
+from . import  views,StaffViews,CustomerViews
+
+
+urlpatterns=[
+     path('',views.index),
+     path('customer_register/',views.customer_register.as_view(), name='customer_register'),
+     path('employee_register/',views.employee_register.as_view(), name='employee_register'),
+     path('login/',views.login_request, name='login'),
+     path('login1/',views.login_request1, name='login1'),
+     path('logout/',views.logout_view, name='logout'),
+     path('contact/',views.contact.as_view(), name='contact'),
+     path('staff_home', StaffViews.staff_home, name="staff_home"),
+     path('staff_account', StaffViews.staff_account, name="staff_account"),
+     path('staff_account_save', StaffViews.staff_account_save, name="staff_account_save"),
+  #  path('staff_update_attendance', StaffViews.staff_update_attendance, name="staff_update_attendance"),
+  #  path('get_students', StaffViews.get_students, name="get_students"),
+  #  path('get_attendance_dates', StaffViews.get_attendance_dates, name="get_attendance_dates"),
+  #  path('get_attendance_student', StaffViews.get_attendance_student, name="get_attendance_student"),
+   # path('save_attendance_data', StaffViews.save_attendance_data, name="save_attendance_data"),
+  #  path('save_updateattendance_data', StaffViews.save_updateattendance_data, name="save_updateattendance_data"),
+    #path('staff_apply_leave', StaffViews.staff_apply_leave, name="staff_apply_leave"),
+    #path('staff_apply_leave_save', StaffViews.staff_apply_leave_save, name="staff_apply_leave_save"),
+    path('staff_feedback', StaffViews.staff_feedback, name="staff_feedback"),
+    path('staff_feedback_save', StaffViews.staff_feedback_save, name="staff_feedback_save"),
+    path('staff_profile', StaffViews.staff_profile, name="staff_profile"),
+    path('staff_profile_save', StaffViews.staff_profile_save, name="staff_profile_save"),
+    #path('staff_fcmtoken_save', StaffViews.staff_fcmtoken_save, name="staff_fcmtoken_save"),
+    path('staff_all_notification', StaffViews.staff_all_notification, name="staff_all_notification"),
+    #path('staff_add_result', StaffViews.staff_add_result, name="staff_add_result"),
+    #path('save_student_result', StaffViews.save_student_result, name="save_student_result"),
+   # path('edit_student_result',EditResultViewClass.as_view(), name="edit_student_result"),
+   # path('fetch_result_student',StaffViews.fetch_result_student, name="fetch_result_student"),
+  #  path('start_live_classroom',StaffViews.start_live_classroom, name="start_live_classroom"),
+ #   path('start_live_classroom_process',StaffViews.start_live_classroom_process, name="start_live_classroom_process"),
+
+
+    path('student_home', CustomerViews.student_home, name="student_home"),
+    #path('student_view_attendance', CustomerViews.student_view_attendance, name="student_view_attendance"),
+    #path('student_view_attendance_post', CustomerViews.student_view_attendance_post, name="student_view_attendance_post"),
+    #path('student_apply_leave', CustomerViews.student_apply_leave, name="student_apply_leave"),
+    #path('student_apply_leave_save', CustomerViews.student_apply_leave_save, name="student_apply_leave_save"),
+    #path('student_feedback', CustomerViews.student_feedback, name="student_feedback"),
+    #path('student_feedback_save', CustomerViews.student_feedback_save, name="student_feedback_save"),
+    path('student_profile', CustomerViews.student_profile, name="student_profile"),
+    path('student_profile_save', CustomerViews.student_profile_save, name="student_profile_save"),
+    #path('student_fcmtoken_save', CustomerViews.student_fcmtoken_save, name="student_fcmtoken_save"),
+    #path('firebase-messaging-sw.js',views.showFirebaseJS,name="show_firebase_js"),
+    #path('student_all_notification',CustomerViews.student_all_notification,name="student_all_notification"),
+    #path('student_view_result',CustomerViews.student_view_result,name="student_view_result"),
+    #path('join_class_room/<int:subject_id>/<int:session_year_id>',CustomerViews.join_class_room,name="join_class_room"),
+    #path('node_modules/canvas-designer/widget.html',StaffViews.returnHtmlWidget,name="returnHtmlWidget"),
+    path('testurl/',views.Testurl)
+
+]
